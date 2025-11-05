@@ -33,7 +33,7 @@ This project uses **Python**, **MediaPipe**, **Flask**, and **PyAutoGUI** to rec
 ### 1️⃣ Clone or Download the Repository
 
 ```bash
-git clone https://github.com/your-username/hand-gesture-volume-control.git
+git clone https://github.com/Pranava-M/hand-gesture-volume-control.git
 cd hand-gesture-volume-control
 ```
 
