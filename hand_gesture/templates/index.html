@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hand Gesture Volume Control</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    h1 { color: #00ffcc; }
+    #video-frame {
+      border: 4px solid #00ffcc;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    #gesture-text {
+      font-size: 24px;
+      color: #00ffcc;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>✋ Hand Gesture Volume Control</h1>
+  <h3>Show your hand to the camera!</h3>
+  <img src="{{ url_for('video_feed') }}" id="video-frame" width="640" height="480">
+  <p id="gesture-text">Detected Gesture: Loading...</p>
+
+  <script>
+    async function updateGesture() {
+      const res = await fetch('/gesture');
+      const data = await res.json();
+      document.getElementById('gesture-text').innerText = "Detected Gesture: " + data.gesture;
+    }
+    setInterval(updateGesture, 400);
+  </script>
+</body>
+</html>
