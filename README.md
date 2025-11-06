@@ -1,4 +1,4 @@
-# ✋ Hand Gesture Volume Control
+#  Hand Gesture Volume Control
 
 Control your **system volume** using **hand gestures** through your **webcam** — no keyboard or mouse required!
 This project uses **Python**, **MediaPipe**, **Flask**, and **PyAutoGUI** to recognize gestures in real time and trigger volume control actions.
